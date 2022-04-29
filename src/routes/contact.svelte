@@ -5,7 +5,7 @@
 	import { FAVICONSIZE } from '$lib/constants';
 
 	const { author, siteUrl } = website;
-	let title = 'Home';
+	let title = 'Contact';
 	let metadescription = 'manujsdev`s portfolio: this is my postfolio. I show you who I am';
 	const entityMeta: EntityMetaType = {
 		...FAVICONSIZE,
@@ -16,10 +16,10 @@
 		title,
 		entityMeta,
 		metadescription,
-		slug: ''
+		slug: 'contact'
 	};
 </script>
 
 <SEO {...seoProps} />
-<h1>Welcome to SvelteKit</h1>
-<a href="/contact">Contact</a>
+<h1>contact page</h1>
+<a href="/">Home</a>
