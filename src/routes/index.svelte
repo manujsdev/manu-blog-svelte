@@ -22,4 +22,17 @@
 
 <SEO {...seoProps} />
 <h1>Welcome to SvelteKit</h1>
+<span class="my-span">{'<Manu />'}</span>
+<span>盛</span>
 <a href="/contact">Contact</a>
+
+<style>
+	.my-span {
+		font-size: 25px;
+		line-height: 17px;
+		margin: 0px 2vw;
+		font-weight: bold;
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+</style>
