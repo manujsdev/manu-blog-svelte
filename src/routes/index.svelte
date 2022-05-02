@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SEO from '$lib/seo/index.svelte';
+	import SEO from '$lib/components/seo/index.svelte';
 	import website from '$lib/config/website';
 	import type { EntityMetaType } from '$lib/types';
 	import { FAVICONSIZE } from '$lib/constants';

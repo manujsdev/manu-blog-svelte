@@ -4,3 +4,5 @@ export type EntityMetaType = {
 	faviconHeight: number;
 	caption: string;
 } | null;
+
+export type Theme = 'light' | 'dark';
