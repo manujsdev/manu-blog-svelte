@@ -5,19 +5,17 @@
 	import RightSection from './RightSection.svelte';
 
 	let y = 0;
-	let isScrolling = false;
-	let bgNav: any;
 	$: {
 		AppStore.update(value => ({ ...value, onScrolling: y > 0 }));
-		AppStore.subscribe(({ onScrolling }: any) => {
-			isScrolling = onScrolling;
-			bgNav = onScrolling ? '#ffffff40' : 'transparent';
-		});
 	}
 </script>
 
-<nav style="--main-bg-navbar: {bgNav}" class={isScrolling ? 'scrolling' : ''}>
-	<LogoNavbar onScrolling={isScrolling} />
+<nav
+	style="--main-bg-navbar: {$AppStore.onScrolling ? '#ffffff40' : 'transparent'}"
+	class={$AppStore.onScrolling ? 'scrolling' : ''}
+>
+	<LogoNavbar />
+	<span>{$AppStore.onScrolling}</span>
 	<RightSection />
 </nav>
 

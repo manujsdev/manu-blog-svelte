@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let onScrolling = false;
+	import { AppStore } from '$lib/stores/AppStore';
 </script>
 
-<a href="/" class={`logo-navbar-container color-text-navbar-${onScrolling ? 'onscroll' : 'primary'}`}>{'<Manu />'}</a>
+<a href="/" class={`logo-navbar-container color-text-navbar-${$AppStore.onScrolling ? 'onscroll' : 'primary'}`}
+	>{'<Manu />'}</a
+>
 
 <style>
 	.logo-navbar-container {
