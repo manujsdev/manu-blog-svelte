@@ -1,21 +1,18 @@
 <script lang="ts">
-	import { AppStore } from '$lib/stores/AppStore';
+	import { appStore } from '$lib/stores/AppStore';
 
 	import LogoNavbar from './Logo.svelte';
 	import RightSection from './RightSection.svelte';
 
 	let y = 0;
-	$: {
-		AppStore.update(value => ({ ...value, onScrolling: y > 0 }));
-	}
+	$: appStore.updateValue('onScrolling', y > 0);
 </script>
 
 <nav
-	style="--main-bg-navbar: {$AppStore.onScrolling ? '#ffffff40' : 'transparent'}"
-	class={$AppStore.onScrolling ? 'scrolling' : ''}
+	style="--main-bg-navbar: {$appStore.onScrolling ? '#ffffff40' : 'transparent'}"
+	class={$appStore.onScrolling ? 'scrolling' : ''}
 >
 	<LogoNavbar />
-	<span>{$AppStore.onScrolling}</span>
 	<RightSection />
 </nav>
 

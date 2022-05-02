@@ -5,4 +5,12 @@ const obj: AppStoreType = {
 	onScrolling: false
 };
 
-export const AppStore = writable<AppStoreType>(obj);
+function appStoreTwo() {
+	const { subscribe, update } = writable<AppStoreType>(obj);
+	return {
+		subscribe,
+		updateValue: (property: string, newValue: any) => update(value => ({ ...value, [property]: newValue }))
+	};
+}
+
+export const appStore = appStoreTwo();

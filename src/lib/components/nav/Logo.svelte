@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { AppStore } from '$lib/stores/AppStore';
+	import { appStore } from '$lib/stores/AppStore';
 </script>
 
-<a href="/" class={`logo-navbar-container color-text-navbar-${$AppStore.onScrolling ? 'onscroll' : 'primary'}`}
+<a href="/" class={`logo-navbar-container color-text-navbar-${$appStore.onScrolling ? 'onscroll' : 'primary'}`}
 	>{'<Manu />'}</a
 >
 
