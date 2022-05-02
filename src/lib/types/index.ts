@@ -6,3 +6,7 @@ export type EntityMetaType = {
 } | null;
 
 export type Theme = 'light' | 'dark';
+
+export type AppStoreType = {
+	onScrolling: boolean;
+};

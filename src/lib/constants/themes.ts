@@ -9,7 +9,8 @@ export const themes = [
 			colorButton: '#161616',
 			box: '#282828',
 			boxShadow: '#282828',
-			tooltip: '#282828'
+			tooltip: '#282828',
+			bg1: '#504945'
 		}
 	},
 	{
@@ -22,7 +23,8 @@ export const themes = [
 			colorButton: '#161616',
 			box: '#4a4745',
 			boxShadow: '#282828',
-			tooltip: '#757575'
+			tooltip: '#757575',
+			bg1: '#504945'
 		}
 	}
 ];
