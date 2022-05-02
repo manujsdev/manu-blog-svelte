@@ -6,7 +6,7 @@
 </script>
 
 <div class={`toggle color-text-navbar-${$appStore.onScrolling ? 'onscroll' : 'primary'}`} on:click={toggle}>
-	{$theme.name === 'dark' ? '' : '盛'}
+	{$theme.name === 'dark' ? '盛' : ''}
 </div>
 
 <style>

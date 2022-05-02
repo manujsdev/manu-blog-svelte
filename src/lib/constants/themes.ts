@@ -10,7 +10,9 @@ export const themes = [
 			box: '#282828',
 			boxShadow: '#282828',
 			tooltip: '#282828',
-			bg1: '#504945'
+			bg1: '#504945',
+			orange208: '#fe8019',
+			orange: '#d05d3c'
 		}
 	},
 	{
@@ -24,7 +26,9 @@ export const themes = [
 			box: '#4a4745',
 			boxShadow: '#282828',
 			tooltip: '#757575',
-			bg1: '#504945'
+			bg1: '#504945',
+			orange208: '#fe8019',
+			orange: '#d05d3c'
 		}
 	}
 ];
