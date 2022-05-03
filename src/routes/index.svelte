@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/seo/index.svelte';
 	import Intro from '$lib/components/intro/index.svelte';
+	import Skills from '$lib/components/skills/index.svelte';
 	import website from '$lib/config/website';
 	import type { EntityMetaType } from '$lib/types';
 	import { FAVICONSIZE } from '$lib/constants';
@@ -23,3 +24,4 @@
 
 <SEO {...seoProps} />
 <Intro />
+<Skills />
