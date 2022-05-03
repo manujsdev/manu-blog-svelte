@@ -1,7 +1,9 @@
 <script lang="ts">
 	export let width = '12rem';
-	export let extra = '';
+	export let extra: any = undefined;
+	export let extraProps: any = undefined;
 	export let link: string | undefined = undefined;
+	export let iconOrTextLink: string | undefined = undefined;
 	export let icon = '';
 	export let text = '';
 </script>
@@ -9,9 +11,11 @@
 <div style="--main-toolbox-width: {width}" class="container">
 	<span class="box-icon">{icon}</span>
 	<span class="box-text">{text}</span>
-	{extra}
+	<svelte:component this={extra} {...extraProps} />
 	{#if link}
-		<div class="corner-right">ress</div>
+		<div class="corner-right">
+			<a class="link" target="_blank" href={link}>{iconOrTextLink}</a>
+		</div>
 	{/if}
 </div>
 
@@ -51,5 +55,24 @@
 		right: 18px;
 		bottom: 10px;
 		font-size: 1.8em;
+	}
+
+	.link {
+		color: var(--theme-text);
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+		font-size: 1.145em;
+	}
+
+	@media (min-width: 768px) {
+		.link {
+			font-size: 1.5em;
+		}
+	}
+
+	@media (min-width: 1920px) {
+		.link {
+			font-size: 18px;
+		}
 	}
 </style>

@@ -3,6 +3,7 @@
 	import Intro from '$lib/components/intro/index.svelte';
 	import Skills from '$lib/components/skills/index.svelte';
 	import CoreQualifications from '$lib/components/coreQualifications/index.svelte';
+	import Projects from '$lib/components/projects/index.svelte';
 	import website from '$lib/config/website';
 	import type { EntityMetaType } from '$lib/types';
 	import { FAVICONSIZE } from '$lib/constants';
@@ -27,3 +28,4 @@
 <Intro />
 <Skills />
 <CoreQualifications />
+<Projects />
