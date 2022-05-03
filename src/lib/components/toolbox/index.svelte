@@ -13,7 +13,9 @@
 <div style="--main-toolbox-width: {width}" class="container">
 	<span class="box-icon">{icon}</span>
 	<span class="box-text">{text}</span>
-	<svelte:component this={extra} {...extraProps} />
+	{#if extra && extraProps}
+		<svelte:component this={extra} {...extraProps} />
+	{/if}
 	{#if link}
 		<div class="corner-right">
 			<Link {...{ link, iconOrTextLink }} />
