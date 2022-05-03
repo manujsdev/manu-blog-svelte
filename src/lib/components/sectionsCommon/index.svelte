@@ -6,7 +6,9 @@
 
 <div class="container">
 	<TitleSection>{title}</TitleSection>
-	<slot />
+	<div class="section-items">
+		<slot />
+	</div>
 </div>
 
 <style>
@@ -14,5 +16,10 @@
 		display: flex;
 		flex-direction: column;
 		margin: 75px 0;
+	}
+	.section-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 </style>

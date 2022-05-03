@@ -5,17 +5,7 @@
 </script>
 
 <SectionsCommon title="Professional Skills">
-	<div class="section-items">
-		{#each skills as [icon, title, color], i}
-			<Skill {...{ icon, title, color }} />
-		{/each}
-	</div>
+	{#each skills as [icon, title, color], i}
+		<Skill {...{ icon, title, color }} />
+	{/each}
 </SectionsCommon>
-
-<style>
-	.section-items {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-</style>
