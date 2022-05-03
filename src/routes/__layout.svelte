@@ -1,6 +1,7 @@
 <script>
 	import ThemeContext from '$lib/components/theme/ThemeContext.svelte';
 	import NavBar from '$lib/components/nav/index.svelte';
+	import Footer from '$lib/components/footer/index.svelte';
 </script>
 
 <ThemeContext>
@@ -8,6 +9,7 @@
 	<main>
 		<slot />
 	</main>
+	<Footer />
 </ThemeContext>
 
 <style>

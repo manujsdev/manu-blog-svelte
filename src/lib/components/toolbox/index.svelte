@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Link from '$lib/components/Link/index.svelte';
+
 	export let width = '12rem';
 	export let extra: any = undefined;
 	export let extraProps: any = undefined;
@@ -14,7 +16,7 @@
 	<svelte:component this={extra} {...extraProps} />
 	{#if link}
 		<div class="corner-right">
-			<a class="link" target="_blank" href={link}>{iconOrTextLink}</a>
+			<Link {...{ link, iconOrTextLink }} />
 		</div>
 	{/if}
 </div>
@@ -55,24 +57,5 @@
 		right: 18px;
 		bottom: 10px;
 		font-size: 1.8em;
-	}
-
-	.link {
-		color: var(--theme-text);
-		text-decoration: none;
-		transition: all 0.3s ease 0s;
-		font-size: 1.145em;
-	}
-
-	@media (min-width: 768px) {
-		.link {
-			font-size: 1.5em;
-		}
-	}
-
-	@media (min-width: 1920px) {
-		.link {
-			font-size: 18px;
-		}
 	}
 </style>
