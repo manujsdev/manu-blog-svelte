@@ -5,7 +5,7 @@
 <div class="intro-index">
 	<span>Hello. I'm Manu.</span>
 	<p>
-		I'm a Developer Front-End with more than 9 years of experience in high-impact environments with very good results.
+		I'm a Front-End Developer with more than 9 years of experience in high-impact environments with very good results.
 	</p>
 	<AboutMeButton />
 </div>
