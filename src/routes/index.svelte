@@ -10,7 +10,7 @@
 
 	const { author, siteUrl } = website;
 	let title = 'Home';
-	let metadescription = 'manujsdev`s portfolio: this is my postfolio';
+	let metadescription = 'manujsdev`s portfolio: this is my postfolio intro';
 	const entityMeta: EntityMetaType = {
 		...FAVICONSIZE,
 		url: `${siteUrl}/`,

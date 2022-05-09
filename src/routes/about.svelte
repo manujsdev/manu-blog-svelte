@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SEO from '$lib/components/seo/index.svelte';
+	import ContactSocials from '$lib/components/contactSocials/index.svelte';
 	import website from '$lib/config/website';
 	import type { EntityMetaType } from '$lib/types';
 	import { FAVICONSIZE } from '$lib/constants';
@@ -21,5 +22,43 @@
 </script>
 
 <SEO {...seoProps} />
-<h1>About me page</h1>
-<a href="/">Home</a>
+
+<div class="container">
+	<span class="my-name">Hello. I'm Manu</span>
+	<h3>Javascript Developer</h3>
+	<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
+	<ContactSocials icon="" value="@manujsdev" />
+	<ContactSocials icon="" value="@manujsdev" />
+</div>
+<p>
+	I am a developer who graduated from Software engineering with more than 9 years of experience in high-impact
+	environments with very good results. I'm ready for software management and development.{' '}
+</p>
+<p>
+	I have experience in web application development and database administration in distributions based on Debian and its
+	respective administrations.
+</p>
+<p>
+	I consider myself very passionate, responsible, organized and creative. I have ease of communication and I believe in
+	teamwork.
+</p>
+<p>I have a high disposition to continue my professional development and I definitely like new challenges.</p>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.my-name {
+		font-size: 1.78em;
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 1.443em;
+		max-width: 80%;
+		text-align: justify;
+		margin: 1em;
+	}
+</style>
