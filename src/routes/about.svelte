@@ -26,9 +26,11 @@
 <div class="container">
 	<span class="my-name">Hello. I'm Manu</span>
 	<h3>Javascript Developer</h3>
-	<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
-	<ContactSocials icon="" value="@manujsdev" />
-	<ContactSocials icon="" value="@manujsdev" />
+	<div class="socials">
+		<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
+		<ContactSocials icon="" value="@manujsdev" />
+		<ContactSocials icon="" value="@manujsdev" />
+	</div>
 </div>
 <p>
 	I am a developer who graduated from Software engineering with more than 9 years of experience in high-impact
@@ -48,6 +50,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		padding-top: 44px;
 	}
 
 	.my-name {
@@ -60,5 +63,11 @@
 		max-width: 80%;
 		text-align: justify;
 		margin: 1em;
+	}
+
+	.socials {
+		margin: 3em 0;
+		display: flex;
+		flex-direction: column;
 	}
 </style>
