@@ -22,7 +22,7 @@
 	}
 
 	main {
-		margin: 5rem 2rem 0px;
+		margin: 5rem 2rem 5rem;
 	}
 
 	:global(.color-text-navbar-primary) {

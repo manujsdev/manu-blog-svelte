@@ -21,6 +21,7 @@
 
 	span {
 		font-size: 4em;
+		width: 65px;
 	}
 
 	span:hover {

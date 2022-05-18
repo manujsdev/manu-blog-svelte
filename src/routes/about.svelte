@@ -24,30 +24,35 @@
 <SEO {...seoProps} />
 
 <div class="container">
-	<span class="my-name">Hello. I'm Manu</span>
-	<h3>Javascript Developer</h3>
-	<div class="socials">
-		<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
-		<ContactSocials icon="" value="@manujsdev" />
-		<ContactSocials icon="" value="@manujsdev" />
+	<div class="intro">
+		<span class="my-name">Hello. I'm Manu</span>
+		<h3>Javascript Developer</h3>
+		<div class="socials">
+			<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
+			<ContactSocials icon="" value="@manujsdev" />
+			<ContactSocials icon="" value="@manujsdev" />
+		</div>
 	</div>
+	<p>
+		I am a developer who graduated from Software engineering with more than 9 years of experience in high-impact
+		environments with very good results. I'm ready for software management and development.{' '}
+	</p>
+	<p>
+		I have experience in web application development and database administration in distributions based on Debian and
+		its respective administrations.
+	</p>
+	<p>
+		I consider myself very passionate, responsible, organized and creative. I have ease of communication and I believe
+		in teamwork.
+	</p>
+	<p>I have a high disposition to continue my professional development and I definitely like new challenges.</p>
 </div>
-<p>
-	I am a developer who graduated from Software engineering with more than 9 years of experience in high-impact
-	environments with very good results. I'm ready for software management and development.{' '}
-</p>
-<p>
-	I have experience in web application development and database administration in distributions based on Debian and its
-	respective administrations.
-</p>
-<p>
-	I consider myself very passionate, responsible, organized and creative. I have ease of communication and I believe in
-	teamwork.
-</p>
-<p>I have a high disposition to continue my professional development and I definitely like new challenges.</p>
 
 <style>
 	.container {
+		margin: 0 0 10px 0;
+	}
+	.intro {
 		display: flex;
 		flex-direction: column;
 		padding-top: 44px;
