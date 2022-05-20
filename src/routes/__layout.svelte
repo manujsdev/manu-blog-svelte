@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
 	import ThemeContext from '$lib/components/theme/ThemeContext.svelte';
 	import NavBar from '$lib/components/nav/index.svelte';
 	import Footer from '$lib/components/footer/index.svelte';
+	import Analytics from '$lib/components/analytics/indext.svelte';
 </script>
 
+<Analytics />
 <ThemeContext>
 	<NavBar />
 	<main>
