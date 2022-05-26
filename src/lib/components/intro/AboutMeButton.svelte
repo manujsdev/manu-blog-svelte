@@ -5,7 +5,7 @@
 		color: var(--theme-colorButton);
 		text-decoration: none;
 		transition: all 0.3s ease 0s;
-		background-color: var(--theme-orange);
+		background-color: var(--theme-backgroundButton);
 		font-size: 1.145em;
 		width: 9em;
 		height: 2em;
