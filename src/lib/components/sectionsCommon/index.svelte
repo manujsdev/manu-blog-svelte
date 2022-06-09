@@ -15,7 +15,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		margin: 75px 0;
+		margin: 6.75rem 0;
 	}
 	.section-items {
 		display: flex;

@@ -30,7 +30,7 @@
 		width: var(--main-toolbox-width);
 		height: var(--main-toolbox-width);
 		background-color: var(--theme-background);
-		box-shadow: 0 0 10px 0 var(--theme-boxShadow);
+		filter: drop-shadow(0 0 2px var(--theme-text));
 
 		display: flex;
 		flex-direction: column;
@@ -42,7 +42,7 @@
 	}
 	.container:hover {
 		transition: box-shadow 0.2s ease;
-		box-shadow: 0 0 15px 0 var(--theme-boxShadow);
+		filter: drop-shadow(0 0 3px var(--theme-text));
 	}
 
 	.box-icon {

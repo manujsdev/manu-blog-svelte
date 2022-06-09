@@ -29,8 +29,6 @@
 		<h3>Javascript Developer</h3>
 		<div class="socials">
 			<ContactSocials icon="﯉" value="manujsdev@gmail.com" />
-			<ContactSocials icon="" value="@manujsdev" />
-			<ContactSocials icon="" value="@manujsdev" />
 		</div>
 	</div>
 	<p>
@@ -65,8 +63,7 @@
 
 	p {
 		font-size: 1.443em;
-		max-width: 80%;
-		text-align: justify;
+		max-width: 75ch;
 		margin: 1em;
 	}
 
