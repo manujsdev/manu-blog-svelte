@@ -1,64 +1,60 @@
 <script lang="ts">
-	import Link from '$lib/components/Link/index.svelte';
+  import Link from '$lib/components/Link/index.svelte';
+  import ToolBoxContainer from './ToolBoxContainer.svelte';
 
-	export let width = '12rem';
-	export let extra: any = undefined;
-	export let extraProps: any = undefined;
-	export let link: string | undefined = undefined;
-	export let iconOrTextLink: string | undefined = undefined;
-	export let icon = '';
-	export let text = '';
+  export let width = '12rem';
+  export let extra: any = undefined;
+  export let extraProps: any = undefined;
+  export let link: string | undefined = undefined;
+  export let iconOrTextLink: string | undefined = undefined;
+  export let icon = '';
+  export let text = '';
+  export let target = '_selft';
+  export let isIcon = true;
+  export let hasLeftContent = false;
+  export let leftContent: any = undefined;
 </script>
 
-<div style="--main-toolbox-width: {width}" class="container">
-	<span class="box-icon">{icon}</span>
-	<span class="box-text">{text}</span>
-	{#if extra && extraProps}
-		<svelte:component this={extra} {...extraProps} />
-	{/if}
-	{#if link}
-		<div class="corner-right">
-			<Link {...{ link, iconOrTextLink }} />
-		</div>
-	{/if}
-</div>
+<ToolBoxContainer {width}>
+  <span class="box-icon">{icon}</span>
+  <span class="box-text">{text}</span>
+  {#if extra && extraProps}
+    <svelte:component this={extra} {...extraProps} />
+  {/if}
+  {#if hasLeftContent}
+    <div class="corner-left">
+      <svelte:component this={leftContent} />
+    </div>
+  {/if}
+  {#if link}
+    <div class="corner-right">
+      <Link {link} {iconOrTextLink} {target} {isIcon} />
+    </div>
+  {/if}
+</ToolBoxContainer>
 
 <style>
-	.container {
-		border-radius: 0.56em;
-		transition: box-shadow 0.2s ease, border 0.2s ease;
-		width: var(--main-toolbox-width);
-		height: var(--main-toolbox-width);
-		background-color: var(--theme-background);
-		filter: drop-shadow(0 0 2px var(--theme-text));
+  .box-icon {
+    font-size: 2.2em;
+    margin: 17px 0;
+  }
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-		text-align: center;
-		margin: 20px;
-		position: relative;
-	}
-	.container:hover {
-		transition: box-shadow 0.2s ease;
-		filter: drop-shadow(0 0 3px var(--theme-text));
-	}
+  .box-text {
+    font-weight: bold;
+    margin: 15px;
+  }
 
-	.box-icon {
-		font-size: 2.2em;
-		margin: 17px 0;
-	}
+  .corner-left {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 1.8em;
+  }
 
-	.box-text {
-		font-weight: bold;
-		margin: 15px;
-	}
-
-	.corner-right {
-		position: absolute;
-		right: 18px;
-		bottom: 10px;
-		font-size: 1.8em;
-	}
+  .corner-right {
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    font-size: 1.8em;
+  }
 </style>
