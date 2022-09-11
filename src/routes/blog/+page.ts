@@ -1,7 +1,6 @@
 import type { PageLoad } from './$types';
 
-const allPosts = import.meta.glob('./*/*.{md, svx}');
-console.log('all: ', allPosts);
+const allPosts = import.meta.glob('../../lib/articles/*/*.{md, svx}');
 const body: any[] = [];
 for (const path in allPosts) {
   const post = allPosts[path];

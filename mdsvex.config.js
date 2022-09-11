@@ -10,7 +10,7 @@ const config = defineConfig({
   smartypants: {
     dashes: 'oldschool'
   },
-  layout: { blog: path.join(dirname, './src/routes/blog/_layout.svelte') },
+  layout: { blog: path.join(dirname, './src/routes/blog/+layout.svelte') },
 
   remarkPlugins: [],
   rehypePlugins: []
