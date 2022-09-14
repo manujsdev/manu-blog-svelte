@@ -5,11 +5,15 @@
   import type { EntityMetaType } from '$lib/types';
   import website from '$lib/config/website';
   import { FAVICONSIZE, H_ELLIPSIS_ENTITY } from '$lib/constants';
+  import { _ } from 'svelte-i18n';
+  import GenericButton from '$lib/components/buttons/GenericButton.svelte';
 
   /** @type {import('./$types').PageData} */
   export let data: any;
+
+  console.log('data in component: ', JSON.stringify(data));
   export let initialPosts = 1;
-  const postCount = data.posts.length;
+  const postCount = data?.posts?.length;
 
   const { author, siteUrl } = website;
 
@@ -30,7 +34,7 @@
   };
 
   $: showPosts = initialPosts;
-  $: displayPosts = data.posts.slice(0, showPosts);
+  $: displayPosts = data?.posts?.slice(0, showPosts);
 
   const onMoreArticles = () => {
     showPosts += initialPosts;
@@ -38,17 +42,15 @@
 </script>
 
 <SEO {...seoProps} />
-<SectionsCommon title="Articles">
+<SectionsCommon title={$_('articles.title')}>
   {#if postCount}
     {#each displayPosts as { path: link, metadata: { datePublished, title, excerpt, tags, slug } }}
       <ToolboxArticles width="21.6rem" {title} {excerpt} date={datePublished} {tags} link={`blog/${slug}`} />
     {/each}
   {:else}
-    <p>No articles yet...</p>
+    <p>{$_('articles.noArticles')}</p>
   {/if}
 </SectionsCommon>
-<!-- review later... -->
-<!-- {#if showPosts < postCount}
-  <AboutMeButton  />
-  <button type="submit" on:click={onMoreArticles}>See more {H_ELLIPSIS_ENTITY}</button>
-{/if} -->
+{#if showPosts < postCount}
+  <GenericButton on:click={onMoreArticles} text={$_('articles.seeMore')} />
+{/if}

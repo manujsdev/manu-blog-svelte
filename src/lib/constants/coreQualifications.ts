@@ -6,8 +6,8 @@
  * 04. nf-fa-pencil_square
  */
 export const qualifications = [
-	['', 'Ability to learn new technologies'],
-	['', 'Ability to read code and identify problems'],
-	['', 'Mentor junior programmers'],
-	['', 'Write technical manuals and guidelines']
+  ['', 'home.coreQualifications.abilityLearn'],
+  ['', 'home.coreQualifications.abilityRead'],
+  ['', 'home.coreQualifications.abilityMentor'],
+  ['', 'home.coreQualifications.abilityWrite']
 ];

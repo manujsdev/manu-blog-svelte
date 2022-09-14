@@ -4,5 +4,5 @@ export type ArticleType = {
   title: string;
   excerpt: string;
   slug: string;
-  body: any;
+  content: any;
 };

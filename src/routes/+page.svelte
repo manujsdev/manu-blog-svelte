@@ -24,6 +24,10 @@
     datePublished: new Date().toLocaleDateString(),
     lastUpdated: new Date().toLocaleDateString()
   };
+
+  /** @type {import('./$types').PageData} */
+  export let data: any;
+  console.log('data load: ', data);
 </script>
 
 <SEO {...seoProps} />

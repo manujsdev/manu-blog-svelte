@@ -1,14 +1,26 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import { init, locale, register } from 'svelte-i18n';
+
+async function getCurrentLocale() {
+  let currentLocale = null;
+  locale.subscribe(async value => {
+    currentLocale = value;
+    console.log('now: ', currentLocale);
+  });
+  return currentLocale;
+}
 
 export const load: PageLoad = async ({ params }) => {
   const { slug } = params;
 
   if (slug) {
-    const postPromise = import(`../../../lib/articles/${slug}/index.md`);
+    const currentLocale = await getCurrentLocale();
+    console.log('current locale call: ', currentLocale);
+    const postPromise = await import(`../../../lib/articles/${slug}/index-en.md`);
 
-    const [postResult] = await Promise.all([postPromise]);
-    const { default: body, metadata } = postResult;
+    // const [postResult] = await Promise.all([postPromise]);
+    const { default: content, metadata } = postPromise;
     const { datePublished, lastUpdated, title, excerpt } = metadata;
 
     return {
@@ -17,7 +29,7 @@ export const load: PageLoad = async ({ params }) => {
       title,
       excerpt,
       slug,
-      body
+      content
     };
   }
 

@@ -1,9 +1,9 @@
 ---
 slug: first-article
-title: Introduction to Programming
+title: Introduccion a la programacion
 datePublished: '2022-08-05'
 lastUpdated: '2022-09-08'
-excerpt: 'A quick look to programming'
+excerpt: 'Una breve mirada a la programacion'
 tags: [{ name: 'algorhitm', background: '#ff3e00' }, { name: 'programming', background: '#ead41c' }]
 ---
 

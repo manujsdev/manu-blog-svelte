@@ -4,8 +4,11 @@
 
   /** @type {import('./$types').PageData} */
   export let data: ArticleType;
-  const { body } = data;
+  const { content } = data;
+  console.log('body: ', content);
 </script>
 
-<Article {data} />
-<svelte:component this={body} />
+<article>
+  <Article {data} />
+  <svelte:component this={content} />
+</article>
