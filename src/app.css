@@ -1,0 +1,9 @@
+a {
+  color: var(--theme-text);
+  /* text-decoration: none; */
+  transition: all 0.3s ease 0s;
+}
+
+pre code.hljs {
+  background: #d3d0d0;
+}

@@ -5,4 +5,5 @@ export type ArticleType = {
   excerpt: string;
   slug: string;
   content: any;
+  tags: any;
 };
