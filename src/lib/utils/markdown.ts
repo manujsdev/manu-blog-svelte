@@ -15,6 +15,7 @@ const runner = unified().use(remark2rehype).use(highlight).use(rehypeStringify);
 
 export function process(filename: string) {
   const tree = parser.parse(readSync(filename));
+  console.log('ariclee: ', tree);
   let metadata: any = null;
   if (tree.children.length > 0 && tree.children[0].type === 'yaml') {
     metadata = yaml.load(tree.children[0].value);
