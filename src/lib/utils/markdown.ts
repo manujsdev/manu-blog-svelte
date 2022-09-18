@@ -1,4 +1,4 @@
-import vfile from 'to-vfile';
+import { readSync } from 'to-vfile';
 import { unified } from 'unified';
 import parse from 'remark-parse';
 import gfm from 'remark-gfm';
@@ -14,7 +14,7 @@ const parser = unified().use(parse).use(gfm).use(frontmatter, ['yaml']);
 const runner = unified().use(remark2rehype).use(highlight).use(rehypeStringify);
 
 export function process(filename: string) {
-  const tree = parser.parse(vfile.readSync(filename));
+  const tree = parser.parse(readSync(filename));
   let metadata: any = null;
   if (tree.children.length > 0 && tree.children[0].type === 'yaml') {
     metadata = yaml.load(tree.children[0].value);
