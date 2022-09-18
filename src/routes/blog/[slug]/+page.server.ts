@@ -12,7 +12,16 @@ export const load: PageServerLoad = async ({ params }: any) => {
     const readingArticleTime = Math.ceil(readingTime(content).minutes);
 
     const { datePublished, lastUpdated, title, excerpt, tags } = metadata;
-
+    console.log('article: ', {
+      datePublished,
+      lastUpdated,
+      title,
+      excerpt,
+      slug,
+      content,
+      tags,
+      readingArticleTime
+    });
     return {
       datePublished,
       lastUpdated,

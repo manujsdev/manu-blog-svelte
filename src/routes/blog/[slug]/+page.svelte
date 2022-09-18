@@ -5,6 +5,8 @@
   /** @type {import('./$types').PageData} */
   export let data: ArticleType;
   const { content } = data;
+
+  console.log('article in the view: ', content);
 </script>
 
 <article>
