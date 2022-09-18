@@ -3,17 +3,29 @@ slug: configure-nvim-width-lua
 title: 'Configure Nvim width Lua'
 datePublished: '2022-09-16'
 lastUpdated: '2022-09-16'
-excerpt: 'A quick look to programming'
-tags: [{ name: 'vim/nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
+excerpt: 'A quick look to vim/nvim basic config'
+tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 ---
 
 It is important to have a domain of the text editors that we use to develop software, or simply edit texts.
 That is why I want to explain how I have one of the most used and stable in the industry, Vim, configured in my work environment.
-I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel [Compa Compila](https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w) from youtube.
+I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel [Compa Compila](https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w) from youtube. Also, you can learn with:
+
+```sh
+ vim
+
+:help
+```
+
+or, do the Vim tutor, a 30-minute interactive course for the basic commands
+
+```sh
+ vimtutor
+```
 
 According to the official Vim site it is:
-"Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient"
-Ademas que cuenta con algunas caracteristicas interesantes:
+**"Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient"**
+Also, It has some interesting features:
 
 - persistent, multi-level undo tree
 - extensive plugin system
@@ -30,7 +42,7 @@ According to the official Vim site it is:
 
 If you are interested in learning about Lua, you can go to official [Lua site](https://www.lua.org/).
 
-Here, we going to see how to configure Neovim. For this, we have a _init.vim_ or _init.lua_ file (never both). I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
+We going to see how to configure Neovim. For this, we have a _init.vim_ or _init.lua_ file (never both). I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
 
 ```sh
 :help config
@@ -145,11 +157,22 @@ You can add other configurations, you can see what each of them does by searchin
 - _:help number_
 - _:help cursorline_
 
+The directory of folders we have it like this:
+
+```
+nvim
+├─ init.lua
+└─ lua
+     └─ configs
+            └─ options
+                  └─ init.lua
+```
+
 ### Conclusion
 
 I think that this way you are ready to continue with the configuration of your preferences. I hope it will be helpful for those who want to experiment and those who are planning to take on vim/nvim as one of their main, or main text editor.
 
-## Resources
+### Resources
 
 - https://www.lua.org/
 - https://www.vim.org/

@@ -1,6 +1,7 @@
 <script lang="ts">
   import ToolBoxContainer from './ToolBoxContainer.svelte';
   import LabelItem from '$lib/components/Label/index.svelte';
+  import { formatDate } from '$lib/utils/format';
 
   export let width = '12rem';
   export let title = 'Title';
@@ -8,15 +9,11 @@
   export let date = '';
   export let tags: any[] = [];
   export let link = '';
-
-  function getFormatDate(dateToFormat: string) {
-    return new Date(dateToFormat).toLocaleDateString();
-  }
 </script>
 
 <ToolBoxContainer {width}>
   <div class="space">
-    <div class="date">{getFormatDate(date)}</div>
+    <div class="date">{formatDate(date)}</div>
     <h2 class="title"><a class="color-text-navbar-primary" href={link}>{title}</a></h2>
     <span class="excerpt excerpt-margin">{excerpt}</span>
     <div class="section-tags">

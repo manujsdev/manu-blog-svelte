@@ -6,4 +6,5 @@ export type ArticleType = {
   slug: string;
   content: any;
   tags: any;
+  readingArticleTime: number;
 };
