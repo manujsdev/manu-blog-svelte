@@ -5,6 +5,7 @@ datePublished: '2022-09-15'
 lastUpdated: '2022-09-15'
 excerpt: 'A quick look to programming'
 tags: [{ name: 'vim/nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
+show: false
 ---
 
 It is important to have a domain of the text editors that we use to develop software, or simply edit texts.

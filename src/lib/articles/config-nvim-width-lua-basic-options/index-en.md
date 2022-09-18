@@ -1,10 +1,11 @@
 ---
-slug: configure-nvim-width-lua
-title: 'Configure Nvim width Lua'
-datePublished: '2022-09-16'
-lastUpdated: '2022-09-16'
-excerpt: 'A quick look to vim/nvim basic config'
+slug: config-nvim-width-lua-basic-options
+title: 'Configure Nvim width Lua: Basic Options (1)'
+datePublished: '2022-09-18'
+lastUpdated: '2022-09-18'
+excerpt: 'A quick look at the basic vim/nvim configuration, in this case with tab settings, show line number, set relative line number and others'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
+show: true
 ---
 
 It is important to have a domain of the text editors that we use to develop software, or simply edit texts.
