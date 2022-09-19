@@ -1,25 +1,36 @@
 ---
-slug: configure-nvim-width-lua
-title: 'Configure Nvim width Lua'
-datePublished: '2022-09-15'
-lastUpdated: '2022-09-15'
-excerpt: 'A quick look to programming'
-tags: [{ name: 'vim/nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+slug: config-nvim-width-lua-basic-options
+title: 'Configure Nvim width Lua: Basic Options (1)'
+datePublished: '2022-09-18'
+lastUpdated: '2022-09-18'
+excerpt: 'A quick look at the basic vim/nvim configuration, in this case with tab settings, show line number, set relative line number and others'
+tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
+show: true
 ---
+
+<script>
+  import GenericLink from '$lib/components/Link/GenericLink.svelte';
+</script>
 
 It is important to have a domain of the text editors that we use to develop software, or simply edit texts.
 That is why I want to explain how I have one of the most used and stable in the industry, Vim, configured in my work environment.
-I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel [Compa Compila](https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w) from youtube.
+I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel <GenericLink aria-label="Read a post about Twin Lens Reflex cameras" href="https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w" target="_blank">Compa compila</GenericLink> from youtube. Also, you can learn with:
 
-Es importante tener un dominio sobre los editores de texto que usemos para desarrollar software, o simplemente editar textos.
-Por eso quiero explicar como tengo configurado en mi entorno de trabajo uno de los mas utilizados y estables en la industria, Vim.
-Quiero aclarar que solo estaremos viendo como configurarlo, no como trabajar con vim/nvim, pero les puedo recomendar a los que estan comenzando que vean la serie de videos basicos de como mejorar la productividad del canal [Compa Compila](https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w) de youtube.
+```shell
+ vim
 
-Segun el sitio oficial Vim es:
-Un editor de texto
-"Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient"
-Ademas que cuenta con algunas caracteristicas interesantes:
+:help
+```
+
+or, do the Vim tutor, a 30-minute interactive course for the basic commands
+
+```shell
+ vimtutor
+```
+
+According to the official Vim site it is:
+**"Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient"**
+Also, It has some interesting features:
 
 - persistent, multi-level undo tree
 - extensive plugin system
@@ -27,18 +38,22 @@ Ademas que cuenta con algunas caracteristicas interesantes:
 - powerful search and replace
 - integrates with many tools
 
-En Vim se puede utilizar vimscript y/o lua para realizar las configuraciones. En el caso nuestro trabajaremos con lua.
-Que es Lua? Segun su sitio oficial:
+With Vim you can use vimscript and/or lua language to do the configurations. In this case, we use Lua.
+
+### What is Lua?
+
+According to the official Vim site it is:
 "Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description."
-Si les interesa aprender sobre Lua, pueden ir a https://www.lua.org/ y ampliar sus conocimientos.
 
-Aqui veremos como configurar neovim. Para ello debemos tener un archivo init.vim o init.lua (pero nunca ambos archivos). Se puede profundizar tambien los conocimientos de configuracion abriendo el editor y ejecutando el siguiente comando:
+If you are interested in learning about Lua, you can go to official [Lua site](https://www.lua.org/).
 
-```sh
+We going to see how to configure Neovim. For this, we have a _init.vim_ or _init.lua_ file (never both). I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
+
+```shell
 :help config
 ```
 
-El archivo de configuracion principal se localiza aqui:
+The main configuration file is located here:
 
 | Env              | Config                                       |
 | ---------------- | -------------------------------------------- |
@@ -46,7 +61,7 @@ El archivo de configuracion principal se localiza aqui:
 | Windows          | ~/AppData/Local/nvim/init.lua (or init.vim)  |
 | $XDG_CONFIG_HOME | $XDG_CONFIG_HOME/nvim/init.lua (or init.vim) |
 
-Para una mejor organizacion de las configuraciones tenemos la opcion de ponerlas modularmente, todos los modulos Lua deben ir dentro de la carpeta lua/
+For a better organization of the configurations we have the option to put them modularly, all the Lua modules must go inside the _lua/_ folder
 
 | Env              | Config                    |
 | ---------------- | ------------------------- |
@@ -54,15 +69,15 @@ Para una mejor organizacion de las configuraciones tenemos la opcion de ponerlas
 | Windows          | ~/AppData/Local/nvim/lua  |
 | $XDG_CONFIG_HOME | $XDG_CONFIG_HOME/nvim/lua |
 
-Si tiene un modulo mymodule.mysubmodule, cada directorio es buscado por `lua/mymodule/mysubmodule.lua`, o `lua/mumodule/mysubmodule/init.lua`.
+If you have a **mymodule.mysubmodule** module, each directory is searched for _lua/mymodule/mysubmodule.lua_, or _lua/mumodule/mysubmodule/init.lua_.
 
-Se puede utilizar _require()_ para cargar los modulos que se configuren. Ejemplo:
+You can use _require()_ to load the modules. Example:
 
 ```lua
 require('mymodule')
 ```
 
-Si se fijan no es necesario poner la extension _.lua_. Tambien se pueden cargar submodulos de dos maneras:
+It is not necessary to put the extension _.lua_. Also, you can load submodules in two ways:
 
 ```lua
 require('other_modules.anothermodule')
@@ -72,7 +87,7 @@ require('other_modules.anothermodule')
 require('other_modules/anothermodule')
 ```
 
-Otra informacion importante es saber que de no existir un modulo o ese modulo tiene algun error, se puede detener la ejecucion. Para prevenir de errores inesperados se puede utilizar `pcall()`
+Another important information is to know that if a module does not exist or that module has an error, the execution can be stopped. To prevent unexpected errors you can use _pcall()_
 
 ```lua
 local ok, _ = pcall(require, 'module_with_error')
@@ -81,26 +96,34 @@ if not ok then
 end
 ```
 
-Pueden estudiar mas sobre este tema usando:
+Again, I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
 
-- `:help lua-require`
+```shell
+ :help lua-require
+```
 
-Me parece que ya podemos comenzar a configurar. Lo primero que haremos es crear el archivo donde estaran las configuraciones basicas de vim, ejemplo: si queremos que se vean los numero de lineas, etc.
+I think we can start configuring now. The first thing we will do is create the file where the basic vim configurations will be, example: if we want to see the number of lines.
 
-1. Nos movemos a la carpeta nvm:
+1. We move to the nvim folder:
 
-- `cd .config/nvim`
+```shell
+ cd .config/nvim
+```
 
-2. Creamos el archivo principal de configuracion, lo guardamos y cerramos (por el momento no le agregamos contenido, igual pueden poner algun comentario :-)):
+2. We create the main configuration file, we save it and close (at the moment we do not add content, you can still put a comment :-)):
 
-- `nvim init.lua`
+```shell
+ nvim init.lua
+```
 
-3. Luego creamos el directorio lua y dentro nuestro primer modulo (donde vamos a poner las configuraciones basicas).
+3. Then, we create the lua directory and inside our first module (where we are going to put the basic configurations).
 
-- `mkdir -p lua/configs/options`
-- `nvim lua/configs/options/init.lua`
+```shell
+mkdir -p lua/configs/options
+nvim lua/configs/options/init.lua
+```
 
-4. Agregamos este codigo y lo guardamos:
+4. We add this code and save it:
 
 ```lua
 local options = {
@@ -112,18 +135,23 @@ for k, v in pairs(options) do
 end
 ```
 
-- Aqui hay dos puntos importantes:
-  - Lo primero es declarar una variable con las configuraciones que deseamos (en este caso para que se muestren los numeros de lineas).
-  - La segunda parte utiliza el _wrapper_ `vim.opt.*` como mecanismo para asignar las configuraciones en Lua.
+- There are two important points here.:
+  - The first thing is to declare a variable with the configurations that we want (in this case so that the numbers of lines are show).
+  - The second part uses the **wrapper** _vim.opt.\*_ as a mechanism to assign settings in Lua.
 
-5. Por ultimo, para utilizar estas configuraciones, debemos llamar al archivo de configuraciones en el archivo principal (`init.lua`)
+5. Lastly, to use these settings, we need to call the settings file in the main file (_init.lua_)
 
-- `nvim init.lua`
-- Agregar esto: `require('configs.options')`
+```shell
+nvim init.lua
+```
 
-De esta manera ya tendran configurado para que se muestren los numeros de lineas.
+- Add this:
 
-Tambien podemos agregar otras configuraciones:
+```lua
+require('configs.options')
+```
+
+You already have configured to display the line numbers. Also, We can add other configurations:
 
 ```lua
 local options = {
@@ -139,21 +167,36 @@ local options = {
   hlsearch = true,          -- When there is a previous search pattern, highlight all its matches
   showmatch = true          -- When a bracket is inserted, briefly jump to the matching one
 }
-
-
 ```
 
 1. _cursorline_: marca la linea donde se encuentra el cursor
 2. _tabstop_, _shiftwidth_ y _expandtab_: se utilizan para configurar los tabs
 
-Pueden ir agregando otras configuraciones a su gusto, pueden ir viendo lo que hace cada una de ellas buscando en la documentacion de vim:
+You can add other configurations, you can see what each of them does by searching the vim documentation:
 
-- `:help number`
-- `:help cursorline`
+```shell
+:help number
+:help cursorline
+```
 
-Pienso que de esta manera ya estan listos para continuar con las configuraciones de sus preferencias. Espero sea de ayuda para los que deseen experimentar y los que tienen pensado asumir a vim/nvim como uno de sus principales, o el principal editor de textos.
+The directory of folders we have it like this:
 
-- https://www.lua.org/
-- https://www.vim.org/
-- https://neovim.io/
-- https://github.com/nanotee/nvim-lua-guide
+```
+nvim
+├─ init.lua
+└─ lua
+     └─ configs
+            └─ options
+                  └─ init.lua
+```
+
+### Conclusion
+
+I think that this way you are ready to continue with the configuration of your preferences. I hope it will be helpful for those who want to experiment and those who are planning to take on vim/nvim as one of their main, or main text editor.
+
+### Resources
+
+- <GenericLink aria-label="Read about Lua" href="https://www.lua.org/" target="_blank">Lua website</GenericLink>
+- <GenericLink aria-label="Read about Vim" href="https://www.vim.org/" target="_blank">Vim website</GenericLink>
+- <GenericLink aria-label="Read about Neovim" href="https://neovim.io/" target="_blank">Neovim website</GenericLink>
+- <GenericLink aria-label="Read about Neovim-Lua" href="https://github.com/nanotee/nvim-lua-guide" target="_blank">Nvim-Lua Guide</GenericLink>

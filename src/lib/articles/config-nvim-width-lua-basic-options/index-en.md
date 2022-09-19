@@ -8,11 +8,15 @@ tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '
 show: true
 ---
 
+<script>
+  import GenericLink from '$lib/components/Link/GenericLink.svelte';
+</script>
+
 It is important to have a domain of the text editors that we use to develop software, or simply edit texts.
 That is why I want to explain how I have one of the most used and stable in the industry, Vim, configured in my work environment.
-I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel [Compa Compila](https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w) from youtube. Also, you can learn with:
+I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel <GenericLink aria-label="Read a post about Twin Lens Reflex cameras" href="https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w" target="_blank">Compa compila</GenericLink> from youtube. Also, you can learn with:
 
-```sh
+```shell
  vim
 
 :help
@@ -20,7 +24,7 @@ I want to clarify that we will only be looking at how to configure it, not how t
 
 or, do the Vim tutor, a 30-minute interactive course for the basic commands
 
-```sh
+```shell
  vimtutor
 ```
 
@@ -45,7 +49,7 @@ If you are interested in learning about Lua, you can go to official [Lua site](h
 
 We going to see how to configure Neovim. For this, we have a _init.vim_ or _init.lua_ file (never both). I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
 
-```sh
+```shell
 :help config
 ```
 
@@ -94,22 +98,30 @@ end
 
 Again, I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
 
-- `:help lua-require`
+```shell
+ :help lua-require
+```
 
 I think we can start configuring now. The first thing we will do is create the file where the basic vim configurations will be, example: if we want to see the number of lines.
 
 1. We move to the nvim folder:
 
-- _cd .config/nvim_
+```shell
+ cd .config/nvim
+```
 
 2. We create the main configuration file, we save it and close (at the moment we do not add content, you can still put a comment :-)):
 
-- _nvim init.lua_
+```shell
+ nvim init.lua
+```
 
 3. Then, we create the lua directory and inside our first module (where we are going to put the basic configurations).
 
-- _mkdir -p lua/configs/options_
-- _nvim lua/configs/options/init.lua_
+```shell
+mkdir -p lua/configs/options
+nvim lua/configs/options/init.lua
+```
 
 4. We add this code and save it:
 
@@ -129,8 +141,15 @@ end
 
 5. Lastly, to use these settings, we need to call the settings file in the main file (_init.lua_)
 
-- _nvim init.lua_
-- Add this: _require('configs.options')_
+```shell
+nvim init.lua
+```
+
+- Add this:
+
+```lua
+require('configs.options')
+```
 
 You already have configured to display the line numbers. Also, We can add other configurations:
 
@@ -155,8 +174,10 @@ local options = {
 
 You can add other configurations, you can see what each of them does by searching the vim documentation:
 
-- _:help number_
-- _:help cursorline_
+```shell
+:help number
+:help cursorline
+```
 
 The directory of folders we have it like this:
 
@@ -175,7 +196,7 @@ I think that this way you are ready to continue with the configuration of your p
 
 ### Resources
 
-- https://www.lua.org/
-- https://www.vim.org/
-- https://neovim.io/
-- https://github.com/nanotee/nvim-lua-guide
+- <GenericLink aria-label="Read about Lua" href="https://www.lua.org/" target="_blank">Lua website</GenericLink>
+- <GenericLink aria-label="Read about Vim" href="https://www.vim.org/" target="_blank">Vim website</GenericLink>
+- <GenericLink aria-label="Read about Neovim" href="https://neovim.io/" target="_blank">Neovim website</GenericLink>
+- <GenericLink aria-label="Read about Neovim-Lua" href="https://github.com/nanotee/nvim-lua-guide" target="_blank">Nvim-Lua Guide</GenericLink>
