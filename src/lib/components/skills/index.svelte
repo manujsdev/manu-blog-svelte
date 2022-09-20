@@ -8,8 +8,8 @@
 
 <div transition:fade={{ delay: 250, duration: 300 }}>
   <SectionsCommon title={$_('home.skills')}>
-    {#each skills as [icon, title, color], i}
-      <Skill {...{ icon, title, color }} />
+    {#each skills as [icon, title, color, link], i}
+      <Skill {...{ icon, title, color, link }} />
     {/each}
   </SectionsCommon>
 </div>
