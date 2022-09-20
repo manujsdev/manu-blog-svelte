@@ -1,6 +1,6 @@
 ---
-slug: config-nvim-width-lua-basic-options
-title: 'Configure Nvim width Lua: Basic Options (1)'
+slug: config-nvim-with-lua-basic-options
+title: 'Configure Nvim with Lua: Basic Options (1)'
 datePublished: '2022-09-18'
 lastUpdated: '2022-09-18'
 excerpt: 'A quick look at the basic vim/nvim configuration, in this case with tab settings, show line number, set relative line number and others'

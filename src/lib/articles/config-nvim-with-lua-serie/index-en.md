@@ -1,6 +1,6 @@
 ---
-slug: config-nvim-width-lua-serie
-title: 'Configure Nvim width Lua: The serie'
+slug: config-nvim-with-lua-serie
+title: 'Configure Nvim with Lua: The serie'
 datePublished: '2022-09-17'
 lastUpdated: '2022-09-17'
 excerpt: 'Description to the configure Vim/Nvim with Lua serie'
