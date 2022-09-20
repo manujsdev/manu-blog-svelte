@@ -13,7 +13,8 @@ export const themes = [
       tooltip: '#282828',
       bg1: '#504945',
       orange208: '#fe8019',
-      orange: '#d05d3c'
+      orange: '#d05d3c',
+      table: '#1d2021'
     }
   },
   {
@@ -30,7 +31,8 @@ export const themes = [
       tooltip: '#757575',
       bg1: '#504945',
       orange208: '#fe8019',
-      orange: '#d05d3c'
+      orange: '#d05d3c',
+      table: '#ddd'
     }
   }
 ];

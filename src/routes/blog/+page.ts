@@ -11,7 +11,7 @@ async function parsePosts(postPromise: any) {
       body.push({ path, metadata, date: new Date(metadata.datePublished) });
     }
   }
-  return body.sort((a, b) => a.date - b.date);
+  return body.sort((a, b) => b.date - a.date);
 }
 
 export const load: PageLoad = async () => {

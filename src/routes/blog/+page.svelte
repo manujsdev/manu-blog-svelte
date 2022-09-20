@@ -4,15 +4,14 @@
   import ToolboxArticles from '$lib/components/toolbox/ToolboxArticles.svelte';
   import type { EntityMetaType } from '$lib/types';
   import website from '$lib/config/website';
-  import { FAVICONSIZE, H_ELLIPSIS_ENTITY } from '$lib/constants';
+  import { FAVICONSIZE } from '$lib/constants';
   import { _ } from 'svelte-i18n';
   import GenericButton from '$lib/components/buttons/GenericButton.svelte';
 
   /** @type {import('./$types').PageData} */
   export let data: any;
 
-  console.log('data in component: ', JSON.stringify(data));
-  export let initialPosts = 1;
+  export let initialPosts = 4;
   const postCount = data?.posts?.length;
 
   const { author, siteUrl } = website;

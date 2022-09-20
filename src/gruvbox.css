@@ -131,3 +131,16 @@ pre[class*='language-'] {
 .token.deleted {
   background: #fb4934; /* red2 */
 }
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid var(--theme-table);
+  padding: 8px;
+}
