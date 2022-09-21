@@ -14,7 +14,7 @@
     isArticle: true,
     slug: `blog/${slug}`,
     metadescription: excerpt,
-    timeToRead: `${readingTime.text}`
+    timeToRead: readingTime
   };
 </script>
 

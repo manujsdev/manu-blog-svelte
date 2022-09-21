@@ -2,6 +2,7 @@
   import website from '$lib/config/website';
   import { VERTICAL_LINE_ENTITY } from '$lib/constants/index';
   import type { EntityMetaType } from '$lib/types';
+  import type { ReadTimeResults } from '$lib/types/articles';
   import OpenGraph from './OpenGraph.svelte';
   import SchemaOrg from './SchemaOrg.svelte';
   import Twitter from './Twitter.svelte';
@@ -13,7 +14,7 @@
   export let slug = '';
   export let lastUpdated = '';
   export let datePublished = '';
-  export let timeToRead = '0 min';
+  export let timeToRead: ReadTimeResults;
   export let isArticle = false;
 
   // local variables
@@ -45,7 +46,9 @@
   };
 
   const twitterProps = {
-    twitterUsername
+    twitterUsername,
+    isArticle,
+    timeToRead
   };
 
   const schemaOrgProps = {
