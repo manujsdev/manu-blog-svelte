@@ -60,6 +60,7 @@ We can start to create the plugins.lua file.
     use 'wbthomason/packer.nvim'
     -- My plugins here
     use "nvim-lua/plenary.nvim" -- used by telescope, gitsigns, vgit, neogit, neo-tree.
+    use 'lewis6991/impatient.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
@@ -82,6 +83,37 @@ Also, I installed <GenericLink ariaLabel="Plenary.nvim" href="https://github.com
 - <GenericLink ariaLabel="neogit" href="https://github.com/TimUntersberger/neogit" target="_blank">neogit</GenericLink>
 - <GenericLink ariaLabel="neo-tree.nvim" href="https://github.com/nvim-neo-tree/neo-tree.nvim" target="_blank">neo-tree.nvim</GenericLink>
 
+I installed another important plugin: <GenericLink ariaLabel="impatient.nvim" href="https://github.com/lewis6991/impatient.nvim" target="_blank">impatient.nvim</GenericLink>. This plugin _"Speed up loading Lua modules in Neovim to improve startup time"_. You can verify the <GenericLink ariaLabel="impatient.nvim" href="https://github.com/lewis6991/impatient.nvim#performance-example" target="_blank">impatient.nvim performance</GenericLink>
+
+1. To configure this plugin:
+
+```shell
+  nvim lua/configs/impatient.lua
+```
+
+2. Add this content:
+
+```lua
+  local status_ok, impatient = pcall(require, "impatient")
+  if not status_ok then
+    return
+  end
+
+  impatient.enable_profile()
+```
+
+3. Lastly, to use impatient, we need to call the impatient file in the main file (_init.lua_)
+
+```shell
+  nvim init.lua
+```
+
+- Add this:
+
+```lua
+  require('configs.impatient')
+```
+
 The directory of folders we have it like this:
 
 ```
@@ -92,7 +124,10 @@ nvim
             └─ options
             |      └─ init.lua
             └─ keymaps.lua
+            |
             └─ plugins.lua
+            |
+            └─ impatient.lua
 ```
 
 ### Conclusion
