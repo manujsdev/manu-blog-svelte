@@ -30,5 +30,5 @@ or, do the Vim tutor, a 30-minute interactive course for the basic commands
 
 In this serie you can learn this topics:
 
-1. <GenericLink aria-label="Configure Nvim width Lua: Basic Options (1)" href="/blog/config-nvim-width-lua-basic-options">Configure Nvim width Lua: Basic Options (1)</GenericLink>
-2. <GenericLink aria-label="Configure Nvim width Lua: Keymaps (2)" href="/blog/config-nvim-width-lua-keymaps">Configure Nvim width Lua: Keymaps (2)</GenericLink>
+1. <GenericLink ariaLabel="Configure Nvim width Lua: Basic Options (1)" href="/blog/config-nvim-width-lua-basic-options">Configure Nvim width Lua: Basic Options (1)</GenericLink>
+2. <GenericLink ariaLabel="Configure Nvim width Lua: Keymaps (2)" href="/blog/config-nvim-width-lua-keymaps">Configure Nvim width Lua: Keymaps (2)</GenericLink>

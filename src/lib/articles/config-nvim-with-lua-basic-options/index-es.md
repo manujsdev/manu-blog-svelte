@@ -196,7 +196,7 @@ I think that this way you are ready to continue with the configuration of your p
 
 ### Resources
 
-- <GenericLink aria-label="Read about Lua" href="https://www.lua.org/" target="_blank">Lua website</GenericLink>
-- <GenericLink aria-label="Read about Vim" href="https://www.vim.org/" target="_blank">Vim website</GenericLink>
-- <GenericLink aria-label="Read about Neovim" href="https://neovim.io/" target="_blank">Neovim website</GenericLink>
-- <GenericLink aria-label="Read about Neovim-Lua" href="https://github.com/nanotee/nvim-lua-guide" target="_blank">Nvim-Lua Guide</GenericLink>
+- <GenericLink ariaLabel="Read about Lua" href="https://www.lua.org/" target="_blank">Lua website</GenericLink>
+- <GenericLink ariaLabel="Read about Vim" href="https://www.vim.org/" target="_blank">Vim website</GenericLink>
+- <GenericLink ariaLabel="Read about Neovim" href="https://neovim.io/" target="_blank">Neovim website</GenericLink>
+- <GenericLink ariaLabel="Read about Neovim-Lua" href="https://github.com/nanotee/nvim-lua-guide" target="_blank">Nvim-Lua Guide</GenericLink>
