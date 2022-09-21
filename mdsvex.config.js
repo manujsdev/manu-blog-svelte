@@ -1,7 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
-import { fileURLToPath } from 'url';
-import path from 'path';
-const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
+import readingTime from 'remark-reading-time';
 
 const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
@@ -9,10 +7,11 @@ const config = defineConfig({
   smartypants: {
     dashes: 'oldschool'
   },
-  layout: { blog: path.join(dirname, './src/routes/blog/+layout.svelte') }
 
-  // remarkPlugins: [parse, remark2rehype],
-  // rehypePlugins: [rehypeHighlight]
+  remarkPlugins: [
+    // adds a `readingTime` frontmatter attribute
+    readingTime()
+  ]
 });
 
 export default config;

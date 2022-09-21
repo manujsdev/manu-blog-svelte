@@ -6,14 +6,15 @@
   export let width = '12rem';
   export let title = 'Title';
   export let excerpt = 'excerpt';
-  export let date = '';
+  export let date = '2019/05/05';
   export let tags: any[] = [];
   export let link = '';
+  export let readingTime: any;
 </script>
 
 <ToolBoxContainer {width}>
   <div class="space">
-    <div class="date">{formatDate(date)}</div>
+    <span>{readingTime.text}, Published on {formatDate(date)}</span>
     <h2 class="title"><a class="color-text-navbar-primary" href={link}>{title}</a></h2>
     <span class="excerpt excerpt-margin">{excerpt}</span>
     <div class="section-tags">
@@ -29,7 +30,7 @@
     margin: 0.7rem;
     width: 100%;
   }
-  .date,
+
   .excerpt {
     text-align: left;
     display: block;

@@ -1,3 +1,10 @@
+export interface ReadTimeResults {
+  text: string;
+  time: number;
+  words: number;
+  minutes: number;
+}
+
 export type ArticleType = {
   datePublished: string;
   lastUpdated: string;
@@ -6,5 +13,5 @@ export type ArticleType = {
   slug: string;
   content: any;
   tags: any;
-  readingArticleTime: number;
+  readingTime: ReadTimeResults;
 };

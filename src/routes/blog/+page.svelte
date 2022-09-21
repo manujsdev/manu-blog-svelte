@@ -12,7 +12,7 @@
   export let data: any;
 
   export let initialPosts = 4;
-  const postCount = data?.posts?.length;
+  $: postCount = data.posts?.length;
 
   const { author, siteUrl } = website;
 
@@ -33,7 +33,7 @@
   };
 
   $: showPosts = initialPosts;
-  $: displayPosts = data?.posts?.slice(0, showPosts);
+  $: displayPosts = data.posts?.slice(0, showPosts);
 
   const onMoreArticles = () => {
     showPosts += initialPosts;
@@ -43,8 +43,16 @@
 <SEO {...seoProps} />
 <SectionsCommon title={$_('articles.title')}>
   {#if postCount}
-    {#each displayPosts as { path: link, metadata: { datePublished, title, excerpt, tags, slug } }}
-      <ToolboxArticles width="21.6rem" {title} {excerpt} date={datePublished} {tags} link={`blog/${slug}`} />
+    {#each displayPosts as post}
+      <ToolboxArticles
+        width="21.6rem"
+        title={post?.title}
+        excerpt={post?.excerpt ?? ''}
+        date={post?.datePublished ?? ''}
+        tags={post?.tags ?? []}
+        link={`blog/${post?.slug}`}
+        readingTime={post.readingTime}
+      />
     {/each}
   {:else}
     <p>{$_('articles.noArticles')}</p>
