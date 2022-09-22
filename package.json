@@ -1,7 +1,18 @@
 {
   "name": "manu-blog-svelte",
   "version": "1.0.0",
-  "licence": "MIT",
+  "licence": "BSD-3-Clause",
+  "keywords": [
+    "blog",
+    "javascript",
+    "vim",
+    "neovim"
+  ],
+  "author": {
+    "name": "Manu",
+    "email": "manujsdev@gmail.com",
+    "url": "https://manujsdev.com"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

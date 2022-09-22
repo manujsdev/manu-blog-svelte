@@ -2,7 +2,7 @@
 slug: config-nvim-with-lua-plugin-package-management
 title: 'Configure Nvim with Lua: Plugin/package management (3)'
 datePublished: '2022-09-21'
-lastUpdated: '2022-09-21'
+lastUpdated: '2022-09-22'
 excerpt: 'A quick look at the basic vim/nvim configuration, in this case with the plugin/package management: Packer'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 show: true
@@ -51,10 +51,18 @@ We can start to create the plugins.lua file.
     augroup end
   ]])
 
-  local status_ok, packer = pcall(require, "packer")
-    if not status_ok then
-      return
-    end
+  local status_ok, packer = pcall(require, 'packer')
+  if not status_ok then
+    return
+  end
+
+  packer.init({
+    display = {
+      open_fn = function()
+        return require('packer.util').float({ border = 'rounded' }) -- Using a floating window
+      end
+    }
+  })
 
   return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
@@ -70,10 +78,11 @@ We can start to create the plugins.lua file.
   end)
 ```
 
-1. **ensure_packer** function is for download packer.
-2. **vim.cmd([[autogroup...]])** is for configure Neovim to automatically run **:PackerCompile** whenever _plugins.lua_ is updated.
+1. _ensure_packer_ function is for download packer.
+2. _vim.cmd([[autogroup...]])_ is for configure Neovim to automatically run _:PackerCompile_ whenever _plugins.lua_ is updated.
 3. To prevent unexpected errors you can use _pcall()_.
-4. The last section: **return packer.startup(function(use)...** is where add plugins.
+4. _packer.init(_ is for custom initialization, in this case, I configured Packer to use a floating window for command outputs.
+5. The last section: _return packer.startup(function(use)..._ is where add plugins.
 
 Also, I installed <GenericLink ariaLabel="Plenary.nvim" href="https://github.com/nvim-lua/plenary.nvim" target="_blank">Plenary.nvim</GenericLink>, a useful lua functions used in lots of plugins, example:
 
