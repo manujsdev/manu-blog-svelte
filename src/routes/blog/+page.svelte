@@ -4,7 +4,7 @@
   import ToolboxArticles from '$lib/components/toolbox/ToolboxArticles.svelte';
   import type { EntityMetaType } from '$lib/types';
   import website from '$lib/config/website';
-  import { FAVICONSIZE } from '$lib/constants';
+  import { defaultTimeToRead, FAVICONSIZE } from '$lib/constants';
   import { _ } from 'svelte-i18n';
   import GenericButton from '$lib/components/buttons/GenericButton.svelte';
 
@@ -29,7 +29,8 @@
     metadescription,
     slug: 'blog',
     datePublished: new Date().toLocaleDateString(),
-    lastUpdated: new Date().toLocaleDateString()
+    lastUpdated: new Date().toLocaleDateString(),
+    timeToRead: defaultTimeToRead
   };
 
   $: showPosts = initialPosts;

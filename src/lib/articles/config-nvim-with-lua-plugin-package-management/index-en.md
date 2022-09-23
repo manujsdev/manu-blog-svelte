@@ -51,8 +51,8 @@ We can start to create the plugins.lua file.
     augroup end
   ]])
 
-  local status_ok, packer = pcall(require, 'packer')
-  if not status_ok then
+  local ok, packer = pcall(require, 'packer')
+  if not ok then
     return
   end
 
@@ -103,8 +103,8 @@ I installed another important plugin: <GenericLink ariaLabel="impatient.nvim" hr
 2. Add this content:
 
 ```lua
-  local status_ok, impatient = pcall(require, "impatient")
-  if not status_ok then
+  local ok, impatient = pcall(require, "impatient")
+  if not ok then
     return
   end
 
@@ -126,17 +126,15 @@ I installed another important plugin: <GenericLink ariaLabel="impatient.nvim" hr
 The directory of folders we have it like this:
 
 ```
-nvim
-├─ init.lua
-└─ lua
-     └─ configs
-            └─ options
-            |      └─ init.lua
-            └─ keymaps.lua
-            |
-            └─ plugins.lua
-            |
-            └─ impatient.lua
+  nvim
+  ├─ init.lua
+  └─ lua
+      └─ configs
+          └─ options
+          |   └─ init.lua
+          └─ keymaps.lua
+          └─ plugins.lua
+          └─ impatient.lua
 ```
 
 ### Conclusion

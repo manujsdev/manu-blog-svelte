@@ -74,32 +74,32 @@ If you have a **mymodule.mysubmodule** module, each directory is searched for _l
 You can use _require()_ to load the modules. Example:
 
 ```lua
-require('mymodule')
+  require('mymodule')
 ```
 
 It is not necessary to put the extension _.lua_. Also, you can load submodules in two ways:
 
 ```lua
-require('other_modules.anothermodule')
+  require('other_modules.anothermodule')
 ```
 
 ```lua
-require('other_modules/anothermodule')
+  require('other_modules/anothermodule')
 ```
 
 Another important information is to know that if a module does not exist or that module has an error, the execution can be stopped. To prevent unexpected errors you can use _pcall()_
 
 ```lua
-local ok, _ = pcall(require, 'module_with_error')
-if not ok then
-  -- not loaded
-end
+  local ok, _ = pcall(require, 'module_with_error')
+  if not ok then
+    -- not loaded
+  end
 ```
 
 Again, I recommend you study the documentation of vim to expand knowledge on this topic. They can open the editor (vim) and run the following command:
 
 ```shell
- :help lua-require
+  :help lua-require
 ```
 
 I think we can start configuring now. The first thing we will do is create the file where the basic vim configurations will be, example: if we want to see the number of lines.
@@ -107,32 +107,32 @@ I think we can start configuring now. The first thing we will do is create the f
 1. We move to the nvim folder:
 
 ```shell
- cd .config/nvim
+  cd .config/nvim
 ```
 
 2. We create the main configuration file, we save it and close (at the moment we do not add content, you can still put a comment :-)):
 
 ```shell
- nvim init.lua
+  nvim init.lua
 ```
 
 3. Then, we create the lua directory and inside our first module (where we are going to put the basic configurations).
 
 ```shell
-mkdir -p lua/configs/options
-nvim lua/configs/options/init.lua
+  mkdir -p lua/configs/options
+  nvim lua/configs/options/init.lua
 ```
 
 4. We add this code and save it:
 
 ```lua
-local options = {
-  number = true -- show line numbers
-}
+  local options = {
+    number = true -- show line numbers
+  }
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
+  for k, v in pairs(options) do
+    vim.opt[k] = v
+  end
 ```
 
 - There are two important points here.:
@@ -142,31 +142,31 @@ end
 5. Lastly, to use these settings, we need to call the settings file in the main file (_init.lua_)
 
 ```shell
-nvim init.lua
+  nvim init.lua
 ```
 
 - Add this:
 
 ```lua
-require('configs.options')
+  require('configs.options')
 ```
 
 You already have configured to display the line numbers. Also, We can add other configurations:
 
 ```lua
-local options = {
-  number = true,            -- show line numbers
-  relativenumber = true,    -- Show the line number relative to the line with the cursor in front of each line
-  cursorline = true,        -- highlight the current line
-  tabstop = 2,              -- Number of spaces that a <Tab> in the file counts for
-  shiftwidth = 2,           -- Number of spaces to use for each step of (auto)indent
-  expandtab = true,         -- Use the appropriate number of spaces to insert a <Tab>
-  backup = false,           -- disabled the creation of backups
-  cmdheight = 2,            -- Number of screen lines to use for the command-line
-  fileencoding = 'utf-8',   -- File-content encoding for the current buffer
-  hlsearch = true,          -- When there is a previous search pattern, highlight all its matches
-  showmatch = true          -- When a bracket is inserted, briefly jump to the matching one
-}
+  local options = {
+    number = true,            -- show line numbers
+    relativenumber = true,    -- Show the line number relative to the line with the cursor in front of each line
+    cursorline = true,        -- highlight the current line
+    tabstop = 2,              -- Number of spaces that a <Tab> in the file counts for
+    shiftwidth = 2,           -- Number of spaces to use for each step of (auto)indent
+    expandtab = true,         -- Use the appropriate number of spaces to insert a <Tab>
+    backup = false,           -- disabled the creation of backups
+    cmdheight = 2,            -- Number of screen lines to use for the command-line
+    fileencoding = 'utf-8',   -- File-content encoding for the current buffer
+    hlsearch = true,          -- When there is a previous search pattern, highlight all its matches
+    showmatch = true          -- When a bracket is inserted, briefly jump to the matching one
+  }
 ```
 
 1. _cursorline_: marca la linea donde se encuentra el cursor
@@ -175,8 +175,8 @@ local options = {
 You can add other configurations, you can see what each of them does by searching the vim documentation:
 
 ```shell
-:help number
-:help cursorline
+  :help number
+  :help cursorline
 ```
 
 The directory of folders we have it like this:
@@ -185,9 +185,9 @@ The directory of folders we have it like this:
 nvim
 ├─ init.lua
 └─ lua
-     └─ configs
-            └─ options
-                  └─ init.lua
+    └─ configs
+        └─ options
+            └─ init.lua
 ```
 
 ### Conclusion

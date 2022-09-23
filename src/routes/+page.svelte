@@ -22,12 +22,14 @@
     metadescription,
     slug: '',
     datePublished: new Date().toLocaleDateString(),
-    lastUpdated: new Date().toLocaleDateString()
+    lastUpdated: new Date().toLocaleDateString(),
+    timeToRead: {
+      text: '3 mins',
+      time: 3.4,
+      words: 300,
+      minutes: 4
+    }
   };
-
-  /** @type {import('./$types').PageData} */
-  export let data: any;
-  console.log('data load: ', data);
 </script>
 
 <SEO {...seoProps} />

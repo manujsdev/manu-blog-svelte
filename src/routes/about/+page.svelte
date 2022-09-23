@@ -3,7 +3,7 @@
   import ContactSocials from '$lib/components/contactSocials/index.svelte';
   import website from '$lib/config/website';
   import type { EntityMetaType } from '$lib/types';
-  import { FAVICONSIZE } from '$lib/constants';
+  import { defaultTimeToRead, FAVICONSIZE } from '$lib/constants';
   import { _ } from 'svelte-i18n';
 
   const { author, siteUrl } = website;
@@ -18,7 +18,8 @@
     title,
     entityMeta,
     metadescription,
-    slug: 'about'
+    slug: 'about',
+    timeToRead: defaultTimeToRead
   };
 </script>
 

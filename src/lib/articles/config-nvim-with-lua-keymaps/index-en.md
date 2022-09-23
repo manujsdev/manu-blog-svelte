@@ -127,8 +127,8 @@ Also, we can add other configurations:
 
 ```lua
   -- Move text up and down
-  keymap("v", "<C-j>", ":m .+1<CR>==", opts)
-  keymap("v", "<C-k>", ":m .-2<CR>==", opts)
+  keymap("v", "<C-j>", ":m .+1<CR>==", opts) -- Ctrl + j
+  keymap("v", "<C-k>", ":m .-2<CR>==", opts) -- Ctrl + k
   -- Stay in indent mode
   keymap("v", "<", "<gv", opts)
   keymap("v", ">", ">gv", opts)
