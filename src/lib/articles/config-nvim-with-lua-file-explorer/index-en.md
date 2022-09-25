@@ -1,8 +1,8 @@
 ---
 slug: config-nvim-with-lua-file-explorer
 title: 'Configure Nvim with Lua: File Explorer (5)'
-datePublished: '2022-09-23'
-lastUpdated: '2022-09-23'
+datePublished: '2022-09-25'
+lastUpdated: '2022-09-25'
 excerpt: 'A quick look at the File Explorer'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 show: true
