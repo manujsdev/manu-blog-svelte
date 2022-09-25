@@ -5,7 +5,7 @@ datePublished: '2022-09-23'
 lastUpdated: '2022-09-23'
 excerpt: 'A quick look at the File Explorer'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+show: true
 ---
 
 <script>
@@ -108,6 +108,10 @@ In this case, we going to test <GenericLink ariaLabel="nvim-tree.lua" href="http
   if not ok then
     return
   end
+
+  -- disable netrw at the very start of your init.lua (strongly advised)
+  vim.g.loaded = 1
+  vim.g.loaded_netrwPlugin = 1
 
   nvim_tree.setup({
     view = {
