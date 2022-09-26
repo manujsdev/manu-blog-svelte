@@ -2,7 +2,7 @@
 slug: config-nvim-with-lua-file-explorer
 title: 'Configure Nvim with Lua: File Explorer (5)'
 datePublished: '2022-09-25'
-lastUpdated: '2022-09-25'
+lastUpdated: '2022-09-26'
 excerpt: 'A quick look at the File Explorer'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 show: true
@@ -87,7 +87,7 @@ In this case, we going to test <GenericLink ariaLabel="nvim-tree.lua" href="http
   end)
 ```
 
-- To use <GenericLink ariaLabel="nvim-web-devicons" href="https://github.com/kyazdani42/nvim-web-devicons" target="_blank">nvim-web-devicons</GenericLink>, it requires a patched font: <GenericLink ariaLabel="nerdfonts" href="https://www.nerdfonts.com" target="_blank">nerdfonts</GenericLink>. I recommend that you use it.
+- To use <GenericLink ariaLabel="nvim-web-devicons" href="https://github.com/kyazdani42/nvim-web-devicons" target="_blank">nvim-web-devicons</GenericLink>, it requires a patched font: <GenericLink ariaLabel="nerdfonts" href="https://www.nerdfonts.com" target="_blank">nerdfonts</GenericLink>, if you want icons. I recommend that you use it.
 
 3. Install the packages:
 
@@ -152,7 +152,7 @@ In this case, we going to test <GenericLink ariaLabel="nvim-tree.lua" href="http
   -- ...others keymaps...
 ```
 
-7. To use these settings, we need to call the nvim-tree file in the main file (_init.lua_)
+8. To use these settings, we need to call the nvim-tree file in the main file (_init.lua_)
 
 ```shell
   nvim init.lua
