@@ -1,11 +1,11 @@
 ---
 slug: config-nvim-with-lua-statusline-and-tabs
 title: 'Configure Nvim with Lua: The statusline (Lualine) and open tabs (bufferline) (6)'
-datePublished: '2022-09-26'
-lastUpdated: '2022-09-26'
+datePublished: '2022-09-27'
+lastUpdated: '2022-09-27'
 excerpt: 'A quick look at the statusline and tabsline: use the lualine and bufferline plugins'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+show: true
 ---
 
 <script>
