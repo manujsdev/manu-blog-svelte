@@ -1,11 +1,11 @@
 ---
 slug: config-nvim-with-lua-fuzzy-finder
 title: 'Configure Nvim with Lua: Fuzzy finder, Telescope (7)'
-datePublished: '2022-09-27'
-lastUpdated: '2022-09-27'
+datePublished: '2022-10-04'
+lastUpdated: '2022-10-04'
 excerpt: 'A quick look at the fuzzy finder Telescope plugin'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+show: true
 ---
 
 <script>
