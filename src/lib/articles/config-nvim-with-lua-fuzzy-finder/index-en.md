@@ -39,6 +39,12 @@ Today, we going to test <GenericLink ariaLabel="telescope.nvim" href="https://gi
 
 1. The first step: we add the plugin <GenericLink ariaLabel="telescope.nvim" href="https://github.com/nvim-telescope/telescope.nvim" target="_blank">telescope.nvim</GenericLink> to the plugins.lua file.
 
+- We move to the nvim folder:
+
+```shell
+  cd .config/nvim
+```
+
 ```shell
   nvim lua/configs/plugins.lua
 ```
