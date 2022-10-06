@@ -205,7 +205,7 @@ An important functionality in an IDE is the autocompletion and the highlight cod
   :PackerInstall
 ```
 
-- In my case only install lua, svelte, typescript and css LSP, but you are free to install others from <GenericLink ariaLabel="lsp servers" href="https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#configurations" target="_blank">lsp server configurations</GenericLink>
+- In my case only install lua, svelte, typescript, tailwindcss and css LSP, but you are free to install others from <GenericLink ariaLabel="lsp servers" href="https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#configurations" target="_blank">lsp server configurations</GenericLink>
 
 - For Lua:
 
@@ -247,6 +247,18 @@ An important functionality in an IDE is the autocompletion and the highlight cod
 
 ```shell
   :LspInstall cssls
+```
+
+- For tailwindcss:
+
+```shell
+  npm install -g @tailwindcss/language-server
+```
+
+- In Neovim:
+
+```shell
+  :LspInstall tailwindcss
 ```
 
 4. Later, we create the lsp file.
