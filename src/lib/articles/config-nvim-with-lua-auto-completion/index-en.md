@@ -1,11 +1,11 @@
 ---
 slug: config-nvim-with-lua-auto-completion
 title: 'Configure Nvim with Lua: auto completion, Cmp, treesitter and lsp (8)'
-datePublished: '2022-10-05'
-lastUpdated: '2022-10-05'
+datePublished: '2022-10-11'
+lastUpdated: '2022-10-11'
 excerpt: 'A quick look at the auto completion, Cmp, treesitter and lsp'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+show: true
 ---
 
 <script>
