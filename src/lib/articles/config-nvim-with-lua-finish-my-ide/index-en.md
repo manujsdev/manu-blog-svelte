@@ -1,8 +1,8 @@
 ---
 slug: config-nvim-with-lua-finish-my-ide
 title: 'Configure Nvim with Lua: Finish my IDE, git, project (9)'
-datePublished: '2022-10-12'
-lastUpdated: '2022-10-12'
+datePublished: '2022-10-14'
+lastUpdated: '2022-10-14'
 excerpt: 'A quick look at the git and project plugins'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 show: true
