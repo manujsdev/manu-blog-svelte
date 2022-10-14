@@ -1,25 +1,25 @@
 <script lang="ts">
-	import TitleSection from '$lib/components/titleSection/index.svelte';
+  import TitleSection from '$lib/components/titleSection/index.svelte';
 
-	export let title = '';
+  export let title = '';
 </script>
 
 <div class="container">
-	<TitleSection>{title}</TitleSection>
-	<div class="section-items">
-		<slot />
-	</div>
+  <TitleSection>{title}</TitleSection>
+  <div class="section-items">
+    <slot />
+  </div>
 </div>
 
 <style>
-	.container {
-		display: flex;
-		flex-direction: column;
-		margin: 6.75rem 0;
-	}
-	.section-items {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 6.75rem 0;
+  }
+  .section-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 </style>

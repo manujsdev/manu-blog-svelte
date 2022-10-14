@@ -134,7 +134,7 @@ Also, we can add other configurations:
   keymap("v", ">", ">gv", opts)
 ```
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
 nvim

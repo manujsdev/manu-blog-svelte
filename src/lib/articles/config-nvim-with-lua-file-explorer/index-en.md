@@ -173,7 +173,7 @@ And that's it!! You can use nvim-tree!
 
 ### Directory
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
 nvim

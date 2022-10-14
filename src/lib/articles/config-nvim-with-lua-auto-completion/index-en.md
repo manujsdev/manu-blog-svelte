@@ -516,26 +516,26 @@ And that's it!! You can use Cmp, Lsp Config and Treesitter for autocompletion an
 
 ### Directory
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
 nvim
 ├─ init.lua
 └─ lua
-    └─ configs
-        └─ options
-        |   └─ init.lua
-        └─ keymaps.lua
-        └─ plugins.lua
-        └─ impatient.lua
-        └─ colorscheme.lua
-        └─ nvim-tree.lua
-        └─ lualine.lua
-        └─ bufferline.lua
-        └─ telescope.lua
-        └─ cmp.lua
-        └─ lsp.lua
-        └─ treesitter.lua
+  └─ configs
+    └─ options
+    |   └─ init.lua
+    └─ keymaps.lua
+    └─ plugins.lua
+    └─ impatient.lua
+    └─ colorscheme.lua
+    └─ nvim-tree.lua
+    └─ lualine.lua
+    └─ bufferline.lua
+    └─ telescope.lua
+    └─ cmp.lua
+    └─ lsp.lua
+    └─ treesitter.lua
 ```
 
 ### Conclusion

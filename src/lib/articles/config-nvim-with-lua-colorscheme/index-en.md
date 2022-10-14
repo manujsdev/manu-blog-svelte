@@ -132,7 +132,7 @@ There are other popular colorschemes, such as:
 - <GenericLink ariaLabel="tokyonight.nvim" href="https://github.com/folke/tokyonight.nvim" target="_blank">tokyonight.nvim</GenericLink>
 - <GenericLink ariaLabel="nightfox.nvim" href="https://github.com/EdenEast/nightfox.nvim" target="_blank">nightfox.nvim</GenericLink>
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
 nvim

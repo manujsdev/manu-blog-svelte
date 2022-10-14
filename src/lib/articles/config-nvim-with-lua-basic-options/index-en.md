@@ -179,7 +179,7 @@ You can add other configurations, you can see what each of them does by searchin
   :help cursorline
 ```
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
 nvim

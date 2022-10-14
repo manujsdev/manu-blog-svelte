@@ -123,7 +123,7 @@ I installed another important plugin: <GenericLink ariaLabel="impatient.nvim" hr
   require('configs.impatient')
 ```
 
-The directory of folders we have it like this:
+We have the directory of folders like this:
 
 ```
   nvim

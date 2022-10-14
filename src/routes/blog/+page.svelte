@@ -11,7 +11,7 @@
   /** @type {import('./$types').PageData} */
   export let data: any;
 
-  export let initialPosts = 4;
+  export let initialPosts = 10;
   $: postCount = data.posts?.length;
 
   const { author, siteUrl } = website;
