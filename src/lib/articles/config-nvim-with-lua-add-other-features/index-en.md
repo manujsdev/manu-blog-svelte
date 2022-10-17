@@ -1,11 +1,11 @@
 ---
 slug: config-nvim-with-lua-add-other-features
 title: 'Configure Nvim with Lua: Add other features (10)'
-datePublished: '2022-10-15'
-lastUpdated: '2022-10-15'
+datePublished: '2022-10-17'
+lastUpdated: '2022-10-17'
 excerpt: 'A quick look at other features'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
-show: false
+show: true
 ---
 
 <script>
