@@ -9,24 +9,14 @@
 </script>
 
 <Tooltip text={title}>
-  <div style="--main-color-skill: {color}" class="skill-container">
-    <GenericLink ariaLabel={title} href={link} target="_blank" withDecoration><span>{icon}</span></GenericLink>
+  <div style="--main-color-skill: {color}" class="flex flex-col mx-12">
+    <GenericLink ariaLabel={title} href={link} target="_blank" underline={false}
+      ><span class="text-8xl w-16">{icon}</span></GenericLink
+    >
   </div>
 </Tooltip>
 
 <style>
-  .skill-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 50px;
-  }
-
-  span {
-    font-size: 4em;
-    width: 65px;
-  }
-
   span:hover {
     color: var(--main-color-skill);
     transition: 0.3s;

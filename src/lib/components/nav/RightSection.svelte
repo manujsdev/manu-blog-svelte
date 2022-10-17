@@ -3,21 +3,7 @@
   import NavBarLinks from './NavBarLinks.svelte';
 </script>
 
-<div class="container">
+<div class="flex justify-between items-center pr-4">
   <NavBarLinks />
   <ThemeToggle />
 </div>
-
-<style>
-  .container {
-    display: flex;
-    justify-content: center;
-    padding-right: 20px;
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-right: 35px;
-    }
-  }
-</style>

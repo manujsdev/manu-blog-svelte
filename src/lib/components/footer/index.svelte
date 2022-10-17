@@ -1,30 +1,8 @@
 <script lang="ts">
-	import Socials from './Socials.svelte';
+  import Socials from './Socials.svelte';
 </script>
 
-<footer class="container">
-	<div class="copy-right"> 2022 - Manu</div>
-	<Socials />
+<footer class="flex justify-between items-center text-theme-text fixed bottom-0 w-full z-10 h-14 backdrop-blur-sm">
+  <div class="ml-6"> 2022 - Manu</div>
+  <Socials />
 </footer>
-
-<style>
-	.container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: var(--theme-text);
-
-		max-width: 100vw;
-		height: 55px;
-		z-index: 4;
-		justify-content: space-between;
-		backdrop-filter: blur(4px);
-		bottom: 0;
-		position: fixed;
-		width: 100vw;
-	}
-
-	.copy-right {
-		margin-left: 22px;
-	}
-</style>

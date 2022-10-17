@@ -13,50 +13,14 @@
 </script>
 
 <ToolBoxContainer {width}>
-  <div class="space">
+  <div class="m-2 w-full">
     <span>{readingTime.text}, Published on {formatDate(date)}</span>
-    <h2 class="title"><a class="color-text-navbar-primary" href={link}>{title}</a></h2>
-    <span class="excerpt excerpt-margin">{excerpt}</span>
-    <div class="section-tags">
+    <h2><a href={link}>{title}</a></h2>
+    <span class="text-left block my-12">{excerpt}</span>
+    <div class="flex flex-wrap justify-start absolute bottom-3">
       {#each tags as { name, background }}
         <LabelItem label={{ name, background }} />
       {/each}
     </div>
   </div>
 </ToolBoxContainer>
-
-<style>
-  .space {
-    margin: 0.7rem;
-    width: 100%;
-  }
-
-  .excerpt {
-    text-align: left;
-    display: block;
-  }
-
-  .section-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    position: absolute;
-    bottom: 10px;
-  }
-
-  .excerpt-margin {
-    margin: 3rem 0;
-  }
-
-  a {
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-  }
-
-  a:hover {
-    transition: 0.5s;
-    border-radius: 3px;
-    color: var(--theme-bg1);
-  }
-</style>

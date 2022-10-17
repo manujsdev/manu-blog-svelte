@@ -25,11 +25,11 @@
 
 <SEO {...seoProps} />
 
-<div class="container">
-  <div class="intro">
-    <span class="my-name">{$_('home.hello')}</span>
+<div class="mx-0 mt-0 mb-3">
+  <div class="flex flex-col pt-11">
+    <span class="text-lg font-bold">{$_('home.hello')}</span>
     <h3>{$_('aboutMe.developer')}</h3>
-    <div class="socials">
+    <div class="flex flex-col my-8 mx-0">
       <ContactSocials icon="﯉" value="manujsdev@gmail.com" />
     </div>
   </div>
@@ -40,29 +40,9 @@
 </div>
 
 <style>
-  .container {
-    margin: 0 0 10px 0;
-  }
-  .intro {
-    display: flex;
-    flex-direction: column;
-    padding-top: 44px;
-  }
-
-  .my-name {
-    font-size: 1.78em;
-    font-weight: bold;
-  }
-
   p {
     font-size: 1.443em;
     max-width: 75ch;
     margin: 1em;
-  }
-
-  .socials {
-    margin: 3em 0;
-    display: flex;
-    flex-direction: column;
   }
 </style>

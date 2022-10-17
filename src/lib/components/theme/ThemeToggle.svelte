@@ -1,17 +1,15 @@
 <script lang="ts">
-	import { appStore } from '$lib/stores/AppStore';
+  import { appStore } from '$lib/stores/AppStore';
 
-	import { getContext } from 'svelte';
-	const { theme, toggle } = getContext('theme');
+  import { getContext } from 'svelte';
+  const { theme, toggle }: any = getContext('theme');
 </script>
 
-<div class={`toggle color-text-navbar-${$appStore.onScrolling ? 'onscroll' : 'primary'}`} on:click={toggle}>
-	{$theme.name === 'dark' ? '盛' : ''}
+<div
+  class:color-text-navbar-onscroll={$appStore.onScrolling}
+  class:color-text-navbar-primary={!$appStore.onScrolling}
+  class="text-xl font-bold cursor-pointer"
+  on:click={toggle}
+>
+  {$theme.name === 'dark' ? '盛' : ''}
 </div>
-
-<style>
-	.toggle {
-		font-size: 22px;
-		cursor: pointer;
-	}
-</style>

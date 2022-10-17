@@ -9,7 +9,7 @@ const config = {
 
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: [preprocess({ preserve: ['ld+json'] }), mdsvex(mdsvexConfig)],
+  preprocess: [preprocess({ preserve: ['ld+json'], postcss: true }), mdsvex(mdsvexConfig)],
 
   kit: {
     adapter: adapter()

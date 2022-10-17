@@ -2,7 +2,7 @@
   import Link from '$lib/components/Link/index.svelte';
   import ToolBoxContainer from './ToolBoxContainer.svelte';
 
-  export let width = '12rem';
+  export let width = '13rem';
   export let extra: any = undefined;
   export let extraProps: any = undefined;
   export let link: string | undefined = undefined;
@@ -16,45 +16,19 @@
 </script>
 
 <ToolBoxContainer {width}>
-  <span class="box-icon">{icon}</span>
-  <span class="box-text">{text}</span>
+  <span class="text-4xl mt-4">{icon}</span>
+  <span class="font-bold m-4">{text}</span>
   {#if extra && extraProps}
     <svelte:component this={extra} {...extraProps} />
   {/if}
   {#if hasLeftContent}
-    <div class="corner-left">
+    <div class="absolute left-0 bottom-2 text-3xl">
       <svelte:component this={leftContent} />
     </div>
   {/if}
   {#if link}
-    <div class="corner-right">
+    <div class="absolute right-4 bottom-2 text-3xl">
       <Link {link} {iconOrTextLink} {target} {isIcon} />
     </div>
   {/if}
 </ToolBoxContainer>
-
-<style>
-  .box-icon {
-    font-size: 2.2em;
-    margin: 17px 0;
-  }
-
-  .box-text {
-    font-weight: bold;
-    margin: 15px;
-  }
-
-  .corner-left {
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    font-size: 1.8em;
-  }
-
-  .corner-right {
-    position: absolute;
-    right: 18px;
-    bottom: 10px;
-    font-size: 1.8em;
-  }
-</style>

@@ -8,50 +8,10 @@
   }
 </script>
 
-<div class="intro-index">
-  <span>{$_('home.hello')}</span>
-  <p>
+<div class="pt-32 flex flex-col">
+  <span class="text-2xl xl:text-4xl">{$_('home.hello')}</span>
+  <p class="text-xl py-3 xl:text-2xl md:max-w-xl">
     {$_('home.description')}
   </p>
   <GenericButton on:click={onAbout} text={$_('home.moreAboutMe')} />
 </div>
-
-<style>
-  .intro-index {
-    padding-top: 20vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .intro-index > span {
-    font-size: 1.38em;
-  }
-
-  @media (min-width: 768px) {
-    .intro-index > span {
-      font-size: 1.48em;
-    }
-    .intro-index > p {
-      font-size: 1.24em;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .intro-index > span {
-      font-size: 1.6em;
-    }
-    .intro-index > p {
-      font-size: 1.3em;
-      max-width: 26em;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    .intro-index > span {
-      font-size: 2.3em;
-    }
-    .intro-index > p {
-      font-size: 1.7em;
-    }
-  }
-</style>
