@@ -2,7 +2,7 @@
 slug: config-nvim-with-lua-basic-options
 title: 'Configure Nvim with Lua: Basic Options (1)'
 datePublished: '2022-09-18'
-lastUpdated: '2022-09-18'
+lastUpdated: '2022-10-20'
 excerpt: 'A quick look at the basic vim/nvim configuration, in this case with tab settings, show line number, set relative line number and others'
 tags: [{ name: 'Vim/Nvim', background: '#019030' }, { name: 'Lua', background: '#000080' }]
 show: true
@@ -169,8 +169,8 @@ You already have configured to display the line numbers. Also, We can add other 
   }
 ```
 
-1. _cursorline_: marca la linea donde se encuentra el cursor
-2. _tabstop_, _shiftwidth_ y _expandtab_: se utilizan para configurar los tabs
+1. _cursorline_: marks the line when the cursor is found.
+2. _tabstop_, _shiftwidth_ y _expandtab_: this is used for config the tabs spaces.
 
 You can add other configurations, you can see what each of them does by searching the vim documentation:
 
@@ -185,9 +185,9 @@ We have the directory of folders like this:
 nvim
 ├─ init.lua
 └─ lua
-    └─ configs
-        └─ options
-            └─ init.lua
+  └─ configs
+    └─ options
+      └─ init.lua
 ```
 
 ### Conclusion
