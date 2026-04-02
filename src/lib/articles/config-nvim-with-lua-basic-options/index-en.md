@@ -12,7 +12,7 @@ show: true
   import GenericLink from '$lib/components/Link/GenericLink.svelte';
 </script>
 
-It is important to have a domain of the text editors that we use to develop software, or simply edit texts.
+It's important to have a domain of the text editors that we use to develop software, or simply edit texts.
 That is why I want to explain how I have one of the most used and stable in the industry, Vim, configured in my work environment.
 I want to clarify that we will only be looking at how to configure it, not how to work with vim/nvim, but I can recommend those who are starting to watch the series of basic videos on how to improve the productivity of the channel <GenericLink aria-label="Read a post about Twin Lens Reflex cameras" href="https://www.youtube.com/channel/UCEKs1YXXru5ZKwYh5QKS30w" target="_blank">Compa compila</GenericLink> from youtube. Also, you can learn with:
 
@@ -155,17 +155,21 @@ You already have configured to display the line numbers. Also, We can add other 
 
 ```lua
   local options = {
-    number = true,            -- show line numbers
-    relativenumber = true,    -- Show the line number relative to the line with the cursor in front of each line
-    cursorline = true,        -- highlight the current line
-    tabstop = 2,              -- Number of spaces that a <Tab> in the file counts for
-    shiftwidth = 2,           -- Number of spaces to use for each step of (auto)indent
-    expandtab = true,         -- Use the appropriate number of spaces to insert a <Tab>
-    backup = false,           -- disabled the creation of backups
-    cmdheight = 2,            -- Number of screen lines to use for the command-line
-    fileencoding = 'utf-8',   -- File-content encoding for the current buffer
-    hlsearch = true,          -- When there is a previous search pattern, highlight all its matches
-    showmatch = true          -- When a bracket is inserted, briefly jump to the matching one
+    number = true, -- show line numbers
+    relativenumber = true, -- Show the line number relative to the line with the cursor in front of each line
+    cursorline = true, -- highlight the current line
+    tabstop = 2, -- Number of spaces that a <Tab> in the file counts for
+    shiftwidth = 2, -- Number of spaces to use for each step of (auto)indent
+    expandtab = true, -- Use the appropriate number of spaces to insert a <Tab>
+    backup = false, -- disabled the creation of backups
+    cmdheight = 2, -- Number of screen lines to use for the command-line
+    fileencoding = "utf-8", -- File-content encoding for the current buffer
+    hlsearch = true, -- When there is a previous search pattern, highlight all its matches
+    showmatch = true, -- When a bracket is inserted, briefly jump to the matching one
+    termguicolors = true, -- Enables 24-bit RGB color
+    showmode = false, -- we don't need show mode because we see in the lualine statusline (Insert, Visual, etc)
+    mouse = "a", -- mouse support for all modes
+    clipboard = "unnamedplus", -- allow to access the system clipboard
   }
 ```
 
